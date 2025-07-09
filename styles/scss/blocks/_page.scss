@@ -45,7 +45,7 @@
 
 [class*="__container"] {
   max-width: #{$container-width}px;
-	@include adaptive-property(padding-inline, 16, 0, 60);
+	@include adaptive-property(padding-inline, 16, 0, 30);
   margin-inline: auto;
   overflow-x: clip;
 }

@@ -31,20 +31,20 @@
 // АДАПТИВНА ВЛАСТИВІСТЬ
 
 @mixin adaptive-property($property, $mobile-size, $tablet-size, $desktop-size, $unit: px) {
+  $max-width: 1440;
   $min-width: 320;
   $tablet-width: 767.98;
-  $max-width: $container-width;
 
   @if ($unit == rem) {
-    $max-width: to-rem($container-width, 16);
-    $min-width: to-rem($min-width, 16);
-    $tablet-width: to-rem($mobile-l, 16);
+    $max-width: math.div(1440, 16);
+    $min-width: math.div(320, 16);
+    $tablet-width: math.div(767.98, 16);
   }
 
   @if ($tablet-size == 0) {
     #{$property}: $desktop-size + $unit;
 
-    @media (max-width: #{$container-width}px) {
+    @media (max-width: 1440px) {
       #{$property}: get-value($min-width, $max-width, $mobile-size, $desktop-size, $unit);
     }
   } @else {
@@ -53,7 +53,7 @@
     @media (min-width: 767.98px) {
       #{$property}: get-value($tablet-width, $max-width, $tablet-size, $desktop-size, $unit);
     }
-    @media (min-width: #{$container-width}px) {
+    @media (min-width: 1440px) {
       #{$property}: $desktop-size + $unit;
     }
   }

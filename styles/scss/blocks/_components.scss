@@ -28,11 +28,10 @@
 }
 //=================================BUTTON=============================
 .button {
-  margin: 100px;
-  min-width: fit-content;
+  width: fit-content;
   padding-block: 0.75rem;
   padding-inline: 1.25rem;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 
@@ -44,4 +43,7 @@
   color: $bg-color-main;
   background: $text-color-main;
   cursor: pointer;
+}
+.button--big {
+  width: max(fit-content, 350px)
 }

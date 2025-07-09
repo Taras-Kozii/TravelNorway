@@ -1,12 +1,12 @@
 @use "../utils/_index" as *;
 
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 50;
-  background: #000;
+
   &__content {
     width: 100%;
     padding: 10px 0;

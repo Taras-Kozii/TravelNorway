@@ -4,7 +4,7 @@ export function countAnimate(count) {
   let startTimestamp = null;
 
   const duraction = parseFloat(count.dataset.counter)
-    ? parseInt(count.dataset.counter)
+    ? parseFloat(count.dataset.counter)
         : 1000;
     const startValue = parseFloat(count.innerHTML);
     const startPosition = 0;

@@ -1,23 +1,18 @@
 'use strict';
 
-import { initSlider } from './sliders.js';
-import { initNavigation } from './menu.js';
-import { initPopups } from './popups.js';
-import { initForms } from './forms.js';
-import { initImageTranslate } from './hover-efects.js';
-import { watcherAnim, watcherToggle, countAnimate } from './animation.js';
+// import { initSlider } from './sliders.js';
+// import { initNavigation } from './menu.js';
+// import { initPopups } from './popups.js';
+// import { initForms } from './forms.js';
+// import { initImageTranslate } from './hover-efects.js';
+import { watcherAnim } from './effects/animation.js';
+import { countAnimate } from './counter.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  initSlider();
-  initNavigation();
-  initPopups();
-  initForms();
-  initImageTranslate();
-
-  watcherToggle('.hero .scroll-anim', 0.3);
+  // initSlider();
+  // initNavigation();
+  // initPopups();
+  // initForms();
+  // initImageTranslate();
   watcherAnim('[data-counter]', 0.2, countAnimate, false);
-  watcherToggle('.hero .scroll-anim', 0.3);
-  watcherToggle('.section-header.scroll-anim', 0.9);
-  watcherToggle('.map .scroll-anim', 0.3);
-  watcherToggle('.get-info .scroll-anim', 0.3);
 });
