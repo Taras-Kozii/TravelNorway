@@ -18,7 +18,6 @@
   }
 }
 
-
 .title {
   @include adaptive-property(font-size, 2, 0, 2.5, rem);
   margin-bottom: 1rem;
@@ -45,5 +44,5 @@
   cursor: pointer;
 }
 .button--big {
-  width: max(fit-content, 350px)
+  width: max(fit-content, 350px);
 }

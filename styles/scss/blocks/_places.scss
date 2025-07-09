@@ -1,0 +1,85 @@
+@use "../utils/index" as *;
+
+.places {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: clip;
+    margin-inline: auto;
+    @include on-mobile-l {
+      max-width: #{$container-width}px;
+      padding-inline: 30px;
+    }
+  }
+  &__top {
+    max-width: 764px;
+    text-align: center;
+    @include adaptive-property(margin-bottom, 32, 0, 40);
+  }
+  &__title {
+    @include adaptive-property(margin-bottom, 1, 0, 1.5, rem);
+  }
+  &__text {
+    max-width: 460px;
+    margin-inline: auto;
+  }
+  &__text p {
+    @include adaptive-property(font-size, 1, 0, 1.125rem, rem);
+  }
+  &__slider {
+    min-width: 0;
+    @include adaptive-property(width, 320, 0, 1340);
+  }
+}
+.slider-places {
+  align-items: center;
+  margin-inline: auto;
+  &__slide {
+    position: relative;
+    left: 0;
+    top: 0;
+    flex-shrink: 0;
+    @include adaptive-property(width, 200, 430, 430);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    cursor: pointer;
+    transition: $transition-duraction;
+    border-radius: $radius;
+    overflow: hidden;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    @include ibg;
+  }
+  &__text {
+    // position: absolute;
+    // bottom: 30px;
+    // left: 30px;
+    width: fit-content;
+  }
+  // &__next,
+  // &__prev {
+  //   position: absolute;
+  //   top: 50%;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   z-index: 2;
+  //   cursor: pointer;
+  // }
+  // &__next {
+  //   translate: 50% -50%;
+  //   @include adaptive-property(right, -36, -44, -64);
+  // }
+  // &__prev {
+  //   translate: -50% -50%;
+  //   @include adaptive-property(left, -36, -44, -64);
+  // }
+}

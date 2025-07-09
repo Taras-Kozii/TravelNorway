@@ -630,3 +630,120 @@ h6 {
     font-size: calc(0.9rem + (0.225) * (100vw - 20rem) / (70));
   }
 }
+
+.places__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-x: clip;
+  margin-inline: auto;
+}
+@media (min-width: 767.98px) {
+  .places__content {
+    max-width: 1400px;
+    padding-inline: 30px;
+  }
+}
+.places__top {
+  max-width: 764px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+@media (max-width: 1440px) {
+  .places__top {
+    margin-bottom: calc(32px + (8) * (100vw - 320px) / (1120));
+  }
+}
+.places__title {
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 1440px) {
+  .places__title {
+    margin-bottom: calc(1rem + (0.5) * (100vw - 20rem) / (70));
+  }
+}
+.places__text {
+  max-width: 460px;
+  margin-inline: auto;
+}
+.places__text p {
+  font-size: 1.125remrem;
+}
+@media (max-width: 1440px) {
+  .places__text p {
+    font-size: calc(1rem + (0.125rem) * (100vw - 20rem) / (70));
+  }
+}
+.places__slider {
+  min-width: 0;
+  width: 1340px;
+}
+@media (max-width: 1440px) {
+  .places__slider {
+    width: calc(320px + (1020) * (100vw - 320px) / (1120));
+  }
+}
+
+.slider-places {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-inline: auto;
+}
+.slider-places__slide {
+  position: relative;
+  left: 0;
+  top: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: calc(200px + (230) * (100vw - 320px) / (447.98));
+  aspect-ratio: 1/1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 16px;
+  overflow: hidden;
+}
+@media (min-width: 767.98px) {
+  .slider-places__slide {
+    width: calc(430px + (0) * (100vw - 767.98px) / (672.02));
+  }
+}
+@media (min-width: 1440px) {
+  .slider-places__slide {
+    width: 430px;
+  }
+}
+.slider-places__img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+.slider-places__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.slider-places__text {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}

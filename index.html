@@ -33,15 +33,8 @@
     <link rel="stylesheet" href="/styles/css/styles.min.css" />
     <!--SWIPER -->
     <link
-      rel="preload"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-      as="style"
-    />
-    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-      media="print"
-      onload="this.media='all'"
     />
   </head>
   <body class="page right-fix-padding">
@@ -111,6 +104,90 @@
             </div>
           </div>
         </section>
+        <section class="main__section places">
+          <div class="places__content">
+            <div class="places__top">
+              <h2 class="places__title title">
+                Exploring Norway’s breathtaking scenery & landscapes
+              </h2>
+              <div class="places__text">
+                <p>
+                  Discover Norway’s Wonders Effortlessly – Your shortcut to
+                  one-click adventures!
+                </p>
+              </div>
+            </div>
+            <div class="swiper places__slider">
+              <div class="swiper-wrapper slider-places">
+                <div class="swiper-slide slider-places__slide">
+                  <div class="slider-places__img">
+                    <img
+                      src="./images/places/img-1-s.webp"
+                      srcset="
+                        ./images/places/img-1-s.webp  600w,
+                        ./images/places/img-1-l.webp 1200w
+                      "
+                      sizes="(max-width: 600px) 600px, 1200px"
+                      alt="places-slide"
+                      decoding="async"
+                      width="200"
+                      height="200"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="slider-places__text">
+                    <h4 class="slider-places__title">Oslo</h4>
+                    <h5 class="slider-places__subtitle">Norway</h5>
+                  </div>
+                </div>
+                <div class="swiper-slide slider-places__slide">
+                  <div class="slider-places__img">
+                    <img
+                      src="./images/places/img-2-s.webp"
+                      srcset="
+                        ./images/places/img-2-s.webp  600w,
+                        ./images/places/img-2-l.webp 1200w
+                      "
+                      sizes="(max-width: 600px) 600px, 1200px"
+                      alt="places-slide"
+                      decoding="async"
+                      width="200"
+                      height="200"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="slider-places__text">
+                    <h4 class="slider-places__title">Bergen</h4>
+                    <h5 class="slider-places__subtitle">Norway</h5>
+                  </div>
+                </div>
+                <div class="swiper-slide slider-places__slide">
+                  <div class="slider-places__img">
+                    <img
+                      src="./images/places/img-3-s.webp"
+                      srcset="
+                        ./images/places/img-3-s.webp  600w,
+                        ./images/places/img-3-l.webp 1200w
+                      "
+                      sizes="(max-width: 600px) 600px, 1200px"
+                      alt="places-slide"
+                      decoding="async"
+                      width="200"
+                      height="200"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="slider-places__text">
+                    <h4 class="slider-places__title">Tromsø</h4>
+                    <h5 class="slider-places__subtitle">Norway</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="slider-places-prev"></div>
+              <div class="slider-places-next"></div>
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer class="footer">
@@ -119,12 +196,6 @@
         </div>
       </footer>
     </div>
-
-    <!--SWIPER -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-      defer
-    ></script>
     <script type="module" src="./scripts/main.js"></script>
   </body>
 </html>
