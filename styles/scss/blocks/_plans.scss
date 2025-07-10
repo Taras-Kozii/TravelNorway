@@ -1,0 +1,116 @@
+@use "../utils/index" as *;
+
+.plans {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: clip;
+    margin-inline: auto;
+    @include adaptive-property(row-gap, 32, 0, 40);
+    @include on-tablet {
+      max-width: #{$container-width}px;
+      padding-inline: 30px;
+    }
+  }
+  &__top {
+    max-width: 780px;
+    @include adaptive-property(padding-inline, 16, 0, 30);
+    text-align: center;
+  }
+  &__text p {
+    @include adaptive-property(font-size, 1, 0, 1.125rem, rem);
+    color: $text-color-2;
+  }
+}
+.swiper.plans-slider {
+  min-width: 0;
+  @include adaptive-property(width, 320, 0, 1340);
+
+  .plans-slider__body {
+    min-width: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .swiper-wrapper.plans-slider__items {
+    align-items: center;
+    margin-inline: auto;
+  }
+}
+
+.slide-plans {
+  @include adaptive-property(width, 320, 0, 430);
+  position: relative;
+  left: 0;
+  top: 0;
+  flex-shrink: 0;
+  aspect-ratio: 1.1 / 1;
+  cursor: pointer;
+  transition: $transition-duraction;
+  border-radius: $radius;
+  overflow: hidden;
+
+  &__body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    pointer-events: none;
+    @include ibg;
+  }
+  &__text {
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: $bg-color-main;
+    border-radius: $radius;
+  }
+  &__top {
+    margin-bottom: 1rem;
+  }
+  &__title {
+    @include adaptive-property(font-size, 1, 0, 1.125, rem);
+    font-weight: 400;
+    line-height: 1.3;
+  }
+  &__place {
+    @include adaptive-property(font-size, 0.75rem, 0, 0.875, rem);
+    font-weight: 500;
+    line-height: 1.3;
+    color: $text-color-2;
+  }
+  &__footer {
+    @include flex(space-between);
+  }
+  &__price {
+    strong {
+      @include adaptive-property(font-size, 1.125, 0, 1.25, rem);
+      font-weight: 600;
+    }
+    span {
+      color: $text-color-2;
+    }
+  }
+  &__rating {
+    padding: 2px 8px;
+    border-radius: 48px;
+    background-color: $bg-color-red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      font-weight: 500;
+      color: $text-color-red;
+    }
+  }
+}
