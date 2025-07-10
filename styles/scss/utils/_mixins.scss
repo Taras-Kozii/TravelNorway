@@ -6,31 +6,44 @@
 
 //Percent
 @function percent($px, $from: 100) {
-	$result: math.div($px, $from) * 100%;
-	@return $result;
+  $result: math.div($px, $from) * 100%;
+  @return $result;
 }
 //REM
 @function to-rem($px, $current: 16) {
-	$result: math.div($px, $current) + rem;
-	@return $result;
+  $result: math.div($px, $current) + rem;
+  @return $result;
 }
 //EM
 @function to-em($px, $current: 16) {
-	$result: math.div($px, $current) + em;
-	@return $result;
+  $result: math.div($px, $current) + em;
+  @return $result;
 }
 
-@function get-value($min-width, $max-width, $size-at-min-width, $size-at-max-width, $unit) {
+@function get-value(
+  $min-width,
+  $max-width,
+  $size-at-min-width,
+  $size-at-max-width,
+  $unit
+) {
   $return-value: calc(
-    #{$size-at-min-width + $unit} + (#{$size-at-max-width - $size-at-min-width}) * ((100vw - #{$min-width + $unit}) /
-          (#{$max-width - $min-width}))
+    #{$size-at-min-width + $unit} + (
+        #{$size-at-max-width - $size-at-min-width}
+      ) * ((100vw - #{$min-width + $unit}) / (#{$max-width - $min-width}))
   );
   @return $return-value;
 }
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // АДАПТИВНА ВЛАСТИВІСТЬ
 
-@mixin adaptive-property($property, $mobile-size, $tablet-size, $desktop-size, $unit: px) {
+@mixin adaptive-property(
+  $property,
+  $mobile-size,
+  $tablet-size,
+  $desktop-size,
+  $unit: px
+) {
   $max-width: 1440;
   $min-width: 320;
   $tablet-width: 767.98;
@@ -45,13 +58,31 @@
     #{$property}: $desktop-size + $unit;
 
     @media (max-width: 1440px) {
-      #{$property}: get-value($min-width, $max-width, $mobile-size, $desktop-size, $unit);
+      #{$property}: get-value(
+        $min-width,
+        $max-width,
+        $mobile-size,
+        $desktop-size,
+        $unit
+      );
     }
   } @else {
-    #{$property}: get-value($min-width, $tablet-width, $mobile-size, $tablet-size, $unit);
+    #{$property}: get-value(
+      $min-width,
+      $tablet-width,
+      $mobile-size,
+      $tablet-size,
+      $unit
+    );
 
     @media (min-width: 767.98px) {
-      #{$property}: get-value($tablet-width, $max-width, $tablet-size, $desktop-size, $unit);
+      #{$property}: get-value(
+        $tablet-width,
+        $max-width,
+        $tablet-size,
+        $desktop-size,
+        $unit
+      );
     }
     @media (min-width: 1440px) {
       #{$property}: $desktop-size + $unit;
@@ -69,11 +100,6 @@
 }
 @mixin on-tablet {
   @media (min-width: #{$tablet}px) {
-    @content;
-  }
-}
-@mixin on-laptop {
-  @media (max-width: 1024px) {
     @content;
   }
 }
@@ -107,14 +133,14 @@
 // GRID
 
 @mixin grid-cards($type: fit, $min: 280px, $max: 1fr, $gap: 30px) {
-	display: grid;
-	gap: $gap;
-	grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
+  display: grid;
+  gap: $gap;
+  grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
 }
 @mixin grid-container($quantity, $column-gap, $row-gap) {
-	display: grid;
-	min-width: 0;
-	grid-template-columns: repeat($quantity, minmax(280px, 1fr));
+  display: grid;
+  min-width: 0;
+  grid-template-columns: repeat($quantity, minmax(280px, 1fr));
   column-gap: $column-gap;
   row-gap: $row-gap;
 }
@@ -142,20 +168,20 @@
 
 // Трикутник
 @mixin triangle($direction, $color, $size, $size2: $size) {
-	@if $direction == left {
-		border: #{$size2}px solid transparent;
-		border-right: #{$size}px solid $color;
-	}
-	@if $direction == right {
-		border: #{$size2}px solid transparent;
-		border-left: #{$size}px solid $color;
-	}
-	@if $direction == top {
-		border: #{$size2}px solid transparent;
-		border-bottom: #{$size}px solid $color;
-	}
-	@if $direction == bottom {
-		border: #{$size2}px solid transparent;
-		border-top: #{$size}px solid $color;
-	}
+  @if $direction == left {
+    border: #{$size2}px solid transparent;
+    border-right: #{$size}px solid $color;
+  }
+  @if $direction == right {
+    border: #{$size2}px solid transparent;
+    border-left: #{$size}px solid $color;
+  }
+  @if $direction == top {
+    border: #{$size2}px solid transparent;
+    border-bottom: #{$size}px solid $color;
+  }
+  @if $direction == bottom {
+    border: #{$size2}px solid transparent;
+    border-top: #{$size}px solid $color;
+  }
 }

@@ -16,13 +16,13 @@
     width: 150%;
     height: 300%;
     border-radius: 50%;
-    background-color: $bg-color-main;
+    background-color: $text-color-2;
     z-index: -1;
     transition: $transition-duraction ease-in-out;
   }
 
   &:hover {
-    color: $text-color-main;
+    color: $bg-color-red;
   }
   &:hover::before {
     bottom: -50%;

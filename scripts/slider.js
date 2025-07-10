@@ -2,10 +2,10 @@
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
 
 export function initSlider() {
-  const slider = new Swiper(".places__slider", {
+  const slider = new Swiper(".places-slider__body", {
     navigation: {
-      nextEl: ".slider-places__next",
-      prevEl: ".slider-places__prev" 
+      nextEl: ".places-slider__next",
+      prevEl: ".places-slider__prev" 
     },
     autoHeight: true,
     on: {
@@ -20,7 +20,7 @@ export function initSlider() {
     observeParents: true,
     observeSlideChildren: true,
     spaceBetween: 16,
-    slidesPerView: 1.8,
+    slidesPerView: 1.5,
     keyboard: {
       enabled: true,
       onlyInViewport: true,
@@ -29,7 +29,7 @@ export function initSlider() {
     breakpoints: { 
       1024: { 
         slidesPerView: 3,
-        spaceBetween: 24, 
+        // spaceBetween: 24, 
       }
     },
   });
