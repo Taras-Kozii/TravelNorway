@@ -1,0 +1,25 @@
+@use "../utils/_index.scss" as *;
+
+.footer {
+      background-color: $text-color-main;
+    border-radius: $radius;
+    color: $bg-color-main;
+    &__form {
+      max-width: 440px;
+    }
+  &__bottom {
+    width: 100%;
+    padding-top: 32px;
+    @include adaptive-property(padding-bottom, 16, 0, 24);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    font-size: 1rem;
+  }
+  &__bottom-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}

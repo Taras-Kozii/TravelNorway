@@ -1248,3 +1248,40 @@ h6 {
     margin: 0 12px 0 0;
   }
 }
+
+.footer {
+  background-color: #000;
+  border-radius: 16px;
+  color: #fff;
+}
+.footer__form {
+  max-width: 440px;
+}
+.footer__bottom {
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 1rem;
+  font-size: 1rem;
+}
+@media (max-width: 1440px) {
+  .footer__bottom {
+    padding-bottom: calc(16px + (8) * (100vw - 320px) / (1120));
+  }
+}
+.footer__bottom-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+}
