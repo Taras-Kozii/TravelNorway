@@ -1,0 +1,19 @@
+.show-bottom-top {
+  opacity: 0;
+}
+.show-bottom-top.active {
+  animation:showcontent 1s ease-in-out 1 forwards
+}
+
+@keyframes showcontent{
+  0% {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter:blur(33px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+    filter:blur(0);
+  }
+}
