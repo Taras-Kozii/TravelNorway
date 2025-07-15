@@ -6,7 +6,7 @@
       position: fixed;
       top: 0;
       left: -100%;
-      height: 100%;
+      height: 100svh;
       width: 100%;
       padding: 100px 30px 30px;
       background-color: #6cafd9;
@@ -17,7 +17,7 @@
         content: "";
         position: fixed;
         width: 100%;
-        height: 80px;
+        height: 60px;
         left: -100%;
         top: 0;
         background: rgba(108, 175, 217, 0.3);
@@ -26,6 +26,7 @@
         z-index: 2;
       }
     }
+
     &__list {
       display: flex;
       flex-direction: column;
@@ -33,39 +34,43 @@
       row-gap: 2rem;
     }
   }
+
   @media (min-width: 1024px) {
     &__list {
-      padding-block: 22px;
+      padding-block: 10px;
       display: flex;
       flex-direction: row;
       align-items: center;
       flex-wrap: wrap;
-      column-gap: 80px;
+      column-gap: 48px;
       row-gap: 1.5rem;
     }
   }
+
   &__link {
-    @include adaptive-property(font-size, 1.5, 1.125, 1.125, rem);
     @include position-r;
     display: inline-block;
-    font-weight: 500;
-    line-height: 36px;
-    letter-spacing: -0.004em;
-    color: #eee8de;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    color: $bg-color-main;
   }
 }
+
 .menu__body.open {
   left: 0%;
+
   &::before {
     left: 0;
   }
 }
+
 .burger {
   @media (max-width: 1024px) {
     @include position-r;
     display: block;
-    @include adaptive-property(width, 2, 2.875, 2.875, rem);
-    @include adaptive-property(height, 1.125, 1.625, 1.625, rem);
+    @include adaptive-property(width, 1.125, 0, 2.25, rem);
+    @include adaptive-property(height, 0.75, 0, 1.5, rem);
     cursor: pointer;
     z-index: 5;
 
@@ -79,35 +84,42 @@
       width: 100%;
       height: 2px;
       border-radius: 10px;
-      background-color: #324052;
+      background-color: $bg-color-main;
       transition: $transition-duraction;
       cursor: pointer;
     }
+
     &::before {
       top: 0;
     }
+
     &::after {
       bottom: 0;
     }
+
     span {
       //top: calc(50% - 1px);
       top: 50%;
       transform: translateY(-50%);
     }
   }
+
   display: none;
 }
+
 .burger.active {
   &::before {
     //top: calc(50% - 1px);
     top: 50%;
     transform: rotate(-45deg) translateY(-50%);
   }
+
   &::after {
     //top: calc(50% - 1px);
     top: 50%;
     transform: rotate(45deg) translateY(-50%);
   }
+
   span {
     opacity: 0;
     transform: scaleX(0);

@@ -1,14 +1,16 @@
 'use strict';
 
 import { initSlider } from './slider.js';
-// import { initNavigation } from './menu.js';
+import { initNavigation } from './menu.js';
 import { watcherAnim } from './effects/animation.js';
 import { countAnimate } from './counter.js';
 import { initForms } from './form.js';
+import { inintHeader } from './header.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initSlider();
-  // initNavigation();
+  initNavigation();
   initForms();
   watcherAnim('[data-counter]', 0.2, countAnimate, false);
+  inintHeader();
 });

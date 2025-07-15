@@ -52,7 +52,7 @@
   }
 
   &__button {
-    width: 100%;
+    width: min(100%, 550px);
 
     @include on-mobile-l {
       width: fit-content;
@@ -60,7 +60,7 @@
   }
 
   &__button:not(:last-child) {
-    margin: 0 0 12px;
+    margin: 0 auto 12px;
 
     @include on-mobile-l {
       margin: 0 12px 0 0;

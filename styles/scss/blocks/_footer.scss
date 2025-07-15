@@ -10,6 +10,8 @@
   }
 
   &__form {
+    width: 100%;
+
     @include on-mobile-l {
       width: 32.8%;
     }
@@ -61,7 +63,6 @@
 }
 
 .form {
-  min-width: 100%;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -72,7 +73,7 @@
   }
 
   &__item {
-    min-width: 100%;
+    width: 100%;
   }
 
   input {
@@ -81,7 +82,7 @@
     @include flex-center;
     border: 1px solid $bg-color-main;
     border-radius: 50px;
-    width: 100%;
+    width: min(100%, 550px);
 
     @include on-tablet {
       max-width: 306px;
@@ -97,7 +98,7 @@
   }
 
   &__submit {
-    width: 100%;
+    width: min(100%, 550px);
     background-color: $bg-color-main;
     color: $text-color-main;
 
