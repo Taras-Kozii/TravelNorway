@@ -1,5 +1,6 @@
 @use "./utils/index" as *;
 @use "./effects/button-effects" as *;
+@use "./effects/link-effects" as *;
 
 @use "./blocks/page";
 @use "./blocks/components";
@@ -12,7 +13,3 @@
 @use "./blocks/plans";
 @use "./blocks/ready";
 @use "./blocks/footer";
-
-
-
-

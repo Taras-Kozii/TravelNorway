@@ -5,17 +5,24 @@
   display: flex;
   align-items: center;
   column-gap: 7px;
+
   &__img {
     display: block;
     width: 30px;
     aspect-ratio: 1 / 1;
     @include ibg;
+    transition: $transition-duraction;
   }
+
   &__title {
     font-size: 18px;
     font-weight: 600;
     color: $bg-color-main;
   }
+}
+
+.logo:hover .logo__img {
+  rotate: 180deg;
 }
 
 .title {
@@ -25,6 +32,7 @@
   line-height: 1.2;
   color: $text-color-main;
 }
+
 //=================================BUTTON=============================
 .button {
   width: fit-content;
@@ -43,6 +51,7 @@
   background: $text-color-main;
   cursor: pointer;
 }
+
 .button--gray {
   border: 1px solid $text-color-2;
   color: $text-color-2;
