@@ -1,19 +1,25 @@
-.show-bottom-top {
+@use "../utils/index" as *;
+
+.show-top {
   opacity: 0;
+  transform: translate(0, 100px);
+  filter:blur(33px);
+  transition: $transition-duraction ease-in-out;
 }
-.show-bottom-top.active {
-  animation:showcontent 1s ease-in-out 1 forwards
+.show-top.active {
+  opacity: 1;
+  transform: translate(0, 0);
+  filter:blur(0);
+}
+.show-left-right {
+  opacity: 0;
+  transform: translate(-100px, 0px);
+  filter:blur(33px);
+  transition: $transition-duraction ease-in-out;
+}
+.show-left-right.active {
+  opacity: 1;
+  transform: translate(0, 0);
+  filter:blur(0);
 }
 
-@keyframes showcontent{
-  0% {
-    opacity: 0;
-    transform: translate(0, 100px);
-    filter:blur(33px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0, 0);
-    filter:blur(0);
-  }
-}

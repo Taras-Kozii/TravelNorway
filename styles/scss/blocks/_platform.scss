@@ -34,6 +34,9 @@
     border-radius: $radius;
     @include ibg;
   }
+  &__button {
+    transition-delay: var(--delay);
+  }
 }
 .list-directions {
   display: flex;
@@ -43,7 +46,17 @@
     display: flex;
     align-items: center;
     column-gap: 24px;
+    transition-delay: var(--delay);
   }
+  // &__item:nth-child(1) {
+  //   transition-delay: 0.2s;
+  // }
+  // &__item:nth-child(2) {
+  //   transition-delay: 0.4s;
+  // }
+  // &__item:nth-child(3) {
+  //   transition-delay: 0.6s;
+  // }
   &__img {
     flex: 0 0 auto;
     @include adaptive-property(width, 48, 0, 64);

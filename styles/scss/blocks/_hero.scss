@@ -22,9 +22,6 @@
     @include on-desktop {
       background-image: url("../../images/hero/img-l.webp");
     }
-    // mask-image: url("../../images/ink.gif");
-    // mask-size: cover;
-    // mask-position: center;
   }
   &__container {
     width: 100%;
@@ -49,6 +46,10 @@
     font-weight: 600;
     line-height: 120%;
     margin-bottom: 1.5rem;
+    transition-delay: 0.2s;
+  }
+  &__text {
+    transition-delay: 0.5s;
   }
   &__text p {
     font-weight: 400;
@@ -60,6 +61,7 @@
   }
   &__button {
     margin-inline: auto;
+    transition-delay: 0.8s;
   }
   &__digits {
     width: 100%;

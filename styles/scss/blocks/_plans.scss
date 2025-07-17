@@ -22,6 +22,9 @@
     @include adaptive-property(font-size, 1, 0, 1.125rem, rem);
     color: $text-color-2;
   }
+  &__button {
+    transition-delay: var(--delay);
+  }
 }
 .swiper.plans-slider {
   min-width: 0;
