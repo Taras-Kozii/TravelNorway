@@ -13,12 +13,14 @@
   background-color: $bg-color-main;
   overflow-x: clip;
 }
+
 // Скролл заблоковано
 .page.lock {
   overflow: hidden;
   touch-action: none;
   overscroll-behavior: none;
 }
+
 // .page:has(.burger.active) {
 //   overflow: hidden;
 // }
@@ -30,12 +32,14 @@
   display: flex;
   flex-direction: column;
   overflow: clip;
+
   // Притискаємо footer
-  > main {
+  >main {
     flex: 1 1 auto;
   }
+
   // Фікс для слайдерів
-  > * {
+  >* {
     min-width: 0;
   }
 }

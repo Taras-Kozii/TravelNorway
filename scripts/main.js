@@ -13,6 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initForms();
   watcherAnim('[data-counter]', 0.2, countAnimate, false);
   inintHeader();
-  watcherToggle('.show-top', 0.2);
+  watcherToggle('.show-top', 0.1);
   watcherToggle('.show-left-right', 0.2);
 });

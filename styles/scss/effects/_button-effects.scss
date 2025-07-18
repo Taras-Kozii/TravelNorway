@@ -23,6 +23,7 @@
   &:hover {
     color: $bg-color-red;
   }
+
   &:hover::before {
     bottom: -50%;
   }

@@ -119,6 +119,10 @@
     row-gap: 12px
   }
 
+  &__item {
+    transition-delay: var(--delay);
+  }
+
   &__link {
     font-size: inherit;
     font-weight: inherit;

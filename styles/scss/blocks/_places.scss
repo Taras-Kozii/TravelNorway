@@ -7,29 +7,35 @@
     align-items: center;
     overflow-x: clip;
     margin-inline: auto;
+
     @include on-tablet {
       max-width: #{$container-width}px;
       padding-inline: 30px;
     }
   }
+
   &__top {
     max-width: 764px;
     @include adaptive-property(padding-inline, 16, 0, 30);
     text-align: center;
     @include adaptive-property(margin-bottom, 32, 0, 40);
   }
+
   &__title {
     @include adaptive-property(margin-bottom, 1, 0, 1.5, rem);
   }
+
   &__text {
     max-width: 460px;
     margin-inline: auto;
     color: $text-color-2;
   }
+
   &__text p {
     @include adaptive-property(font-size, 1, 0, 1.125rem, rem);
   }
 }
+
 .swiper.places-slider {
   min-width: 0;
   @include adaptive-property(width, 320, 0, 1340);
@@ -40,10 +46,12 @@
     padding-inline: 15px;
     overflow: hidden;
   }
+
   .swiper-wrapper.places-slider__items {
     align-items: center;
     margin-inline: auto;
   }
+
   .places-slider__next,
   .places-slider__prev {
     display: none;
@@ -63,14 +71,17 @@
     @include on-tablet {
       display: flex;
     }
+
     &:hover {
       scale: 1.05;
     }
   }
+
   .places-slider__next {
     right: 0;
     rotate: 180deg;
   }
+
   .places-slider__prev {
     left: 0;
   }
@@ -107,14 +118,17 @@
     pointer-events: none;
     @include ibg;
   }
+
   &__text {
     width: fit-content;
     margin: 30px;
     color: $bg-color-main;
   }
+
   &__title {
     @include adaptive-property(font-size, 1, 0, 1.75, rem);
   }
+
   &__subtitle {
     @include adaptive-property(font-size, 0.8, 0, 1.125, rem);
   }
